@@ -1,0 +1,32 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+
+# Local environments and editor files
+.env
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+.DS_Store
+
+# Experiment outputs and logs
+output/
+outputs/
+runs/
+logs/
+wandb/
+work_dirs/
+
+# Model checkpoints and large binary weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Local assistant/workspace metadata
+.agents/
+.codex/
