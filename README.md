@@ -15,7 +15,7 @@
 
 ## 📢 News
 
-- `2026/06/26`: Code and data are publicly available.
+- `2026/06/28`: Code and data are publicly available.
 - `2026/03/31`: The paper is available on [arXiv](https://arxiv.org/abs/2603.27645).
 - `2026/02/21`: OpenDPR is accepted to **CVPR 2026**.
 
