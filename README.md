@@ -24,6 +24,7 @@
 ## ✨ Overview
 
 Open-vocabulary change detection (OVCD) seeks to recognize arbitrary changes of interest by enabling generalization beyond a fixed set of predefined classes. We reformulate OVCD as a two-stage pipeline: first generate class-agnostic change proposals using visual foundation models (VFMs) such as SAM and DINOv2, and then perform category identification with vision-language models (VLMs) such as CLIP. We reveal that category identification errors are the primary bottleneck of OVCD, mainly due to the limited ability of VLMs based on image-text matching to represent fine-grained land-cover categories. To address this, we propose OpenDPR, a training-free vision-centric diffusion-guided prototype retrieval framework. OpenDPR leverages diffusion models to construct diverse prototypes for target categories offline, and to perform similarity retrieval with change proposals in the visual space during inference. The secondary bottleneck lies in change localization, due to the inherent lack of change priors in VFMs. To bridge this gap, we design a spatial-to-change weakly supervised change detection module named S2C to adapt their strong spatial modeling capabilities for change localization. Integrating the pretrained S2C into OpenDPR leads to an optional weakly supervised variant named OpenDPR-W, which further improves OVCD with minimal supervision. Experimental results on four benchmark datasets demonstrate that the proposed methods achieve state-of-the-art performance under both supervision modes.
+<img width="1001" height="555" alt="image" src="https://github.com/user-attachments/assets/72918ea8-f605-45c0-a170-3689e76b1b2e" />
 
 ---
 
@@ -97,7 +98,6 @@ Download the required checkpoints yourself and replace the placeholders in the s
 | --- | --- | --- |
 | `<SAM_CHECKPOINT>` | Path to the SAM checkpoint, such as `sam_vit_h_4b8939.pth` | `infer_OpenDPR/**/infer_*.py`, `infer_OpenDPR_W/**/infer_*.py` |
 | `<DINOV2_MODEL_DIR>` | Local directory of the downloaded DINOv2 model | `dynamic_earth/utils/model.py` |
-| `<DINO_V1_CHECKPOINT>` | Optional DINOv1 checkpoint path, only needed if you switch the model type to DINOv1 | `dynamic_earth/utils/model.py` |
 
 The released inference scripts use **SAM (ViT-H)** and **DINOv2 (ViT-B/14)** by default. Users are encouraged to flexibly try other model variants.
 
@@ -153,7 +153,11 @@ Default prediction paths follow the output directories used by the inference scr
 
 ## 📝 Results
 
-Quantitative results are reported in the paper and supplementary material. Qualitative visualizations will be added soon.
+<img width="1705" height="690" alt="image" src="https://github.com/user-attachments/assets/0f5469b9-f5a9-49d8-9b7d-60ae5852fbd0" />
+
+<img width="1011" height="645" alt="image" src="https://github.com/user-attachments/assets/29f1e6a7-00d0-4380-b4be-5e252b126c78" />
+
+
 
 ---
 
@@ -162,11 +166,13 @@ Quantitative results are reported in the paper and supplementary material. Quali
 If you find this project useful, please consider citing:
 
 ```bibtex
-@inproceedings{guo2026opendpr,
-  title={OpenDPR: Open-Vocabulary Change Detection via Vision-Centric Diffusion-Guided Prototype Retrieval for Remote Sensing Imagery},
-  author={Guo, Qi and Wang, Jue and Liu, Yinhe and Zhong, Yanfei},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year={2026}
+@InProceedings{Guo_2026_CVPR,
+    author    = {Guo, Qi and Wang, Jue and Liu, Yinhe and Zhong, Yanfei},
+    title     = {OpenDPR: Open-Vocabulary Change Detection via Vision-Centric Diffusion-Guided Prototype Retrieval for Remote Sensing Imagery},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {20399-20409}
 }
 ```
 
