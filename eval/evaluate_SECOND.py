@@ -23,12 +23,12 @@ def main():
     # Configuration settings
     CLASS_MAPPING = {
         'background': 0,
-        'water': 1,
-        'ground': 2,
-        'low vegetation': 3,
-        'tree': 4,
-        'building': 5,
-        'playground': 6,
+        'water': 1,  # class_0
+        'ground': 2,  # class_1
+        'low vegetation': 3,  # class_2
+        'tree': 4,  # class_3
+        'building': 5,  # class_4
+        'playground': 6,  # class_5
     }
 
     # Parse command-line arguments
