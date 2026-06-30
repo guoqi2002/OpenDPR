@@ -24,11 +24,11 @@ def main():
         "background": 0, 
         'water': 1,  # class_0
         'grass': 2,  # class_1
-        'building': 3, 
-        'greenhouse': 4, 
-        'road': 5, 
-        'bridge': 6,
-        'bareland': 8,
+        'building': 3,  # class_2
+        'greenhouse': 4,  # class_3
+        'road': 5,  # class_4
+        'bridge': 6,  # class_5
+        'bareland': 8,  # class_6
         'woodland': 9  # class_7
     }
     # Parse command-line arguments
