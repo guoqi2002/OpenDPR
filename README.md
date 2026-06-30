@@ -140,6 +140,8 @@ output/{DATASET}/infer_{CLASS_OR_ALL}
 
 Evaluation scripts are provided in `eval`. Update the ground-truth placeholders before running.
 
+Our evaluation protocol follows DynamicEarth, i.e., we use class-wise binary change evaluation and report IoU and F1 for each category, without evaluating the semantic change direction. Therefore, during multi-class inference, we derive a binary change map for each category from the multi-class semantic predictions: if a changed proposal is predicted as class `i` in either T1 or T2, its mask is merged into `class_i`. For example, in SECOND, `class_0` corresponds to `water`, and `class_5` corresponds to `playground`. 
+
 ```bash
 python eval/evaluate_LEVIR-CD.py
 python eval/evaluate_WHU-CD.py
